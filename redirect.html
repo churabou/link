@@ -5,6 +5,10 @@
     }
   </style>
   <body>
+    <div>
+      <a id="link" href="https://twitter.com/x"></a>
+    </div>
+
     <script>
       let count = 3;
       document.body.innerHTML = `redirecting to x in ${count} seconds !!`;
@@ -13,9 +17,7 @@
         document.body.innerHTML = `redirecting to x in ${count} seconds !!`;
 
         if (count === 0) {
-          const link = document.createElement("a");
-          link.href = "https://twitter.com/x";
-          document.body.appendChild(link);
+          const link = document.getElementById("link");
           link.click();
         }
       }, 1000);
