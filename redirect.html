@@ -1,0 +1,23 @@
+<html>
+  <style>
+    * {
+      padding: 30px;
+    }
+  </style>
+  <body>
+    <script>
+      let count = 3;
+      document.body.innerHTML = `redirecting to x in ${count} seconds`;
+      setInterval(() => {
+        count--;
+        document.body.innerHTML = `redirecting to x in ${count} seconds`;
+
+        if (count === 0) {
+          const link = document.createElement("a");
+          link.href = "https://twitter.com/x";
+          link.click();
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
