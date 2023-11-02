@@ -7,14 +7,19 @@
   <body>
     <div>
       <a id="link" href="https://twitter.com/x"></a>
+      <p id="txt"></p>
     </div>
 
     <script>
       let count = 3;
-      document.body.innerHTML = `redirecting to x in ${count} seconds !!`;
+      document.getElementById(
+        "txt"
+      ).innerHTML = `redirecting to x in ${count} seconds !!`;
       setInterval(() => {
         count--;
-        document.body.innerHTML = `redirecting to x in ${count} seconds !!`;
+        document.getElementById(
+          "txt"
+        ).innerHTML = `redirecting to x in ${count} seconds !!`;
 
         if (count === 0) {
           const link = document.getElementById("link");
