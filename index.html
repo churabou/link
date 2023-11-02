@@ -1,0 +1,21 @@
+<html>
+  <style>
+    * {
+      padding: 30px;
+    }
+  </style>
+  <body>
+    <h1>X</h1>
+
+    <div>
+      <a id="link" href="https://twitter.com/x">open link</a>
+    </div>
+
+    <button id="btn">open JS</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        document.getElementById("link").click();
+      });
+    </script>
+  </body>
+</html>
