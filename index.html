@@ -1,7 +1,11 @@
 <html>
   <style>
-    * {
+    body {
       padding: 30px;
+    }
+
+    div {
+      padding: 8px 0px;
     }
   </style>
   <body>
@@ -14,11 +18,18 @@
     <div>
       <a href="https://churabou.github.io/link/redirect">redirect page</a>
     </div>
-
-    <button id="btn">open JS</button>
+    <div>
+      <button id="btn">Click link programmatically</button>
+    </div>
+    <div>
+      <button id="btn2">Update window.location</button>
+    </div>
     <script>
       document.getElementById("btn").addEventListener("click", function () {
         document.getElementById("link").click();
+      });
+      document.getElementById("btn2").addEventListener("click", function () {
+        window.location = "https://twitter.com/x";
       });
     </script>
   </body>
